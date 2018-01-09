@@ -32,10 +32,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'title:ntext',
             'content:ntext',
             'author',
+            [
+                'attribute'=>'author',
+                'value'=>$model->postAuthor->name
+            ],
             'tag',
-            'post_status',
-            'create_time',
+            [
+                'attribute'=>'post_status',
+                'value'=>$model->postStatus->name
+            ],
+//            'create_time',
             'update_time',
+
         ],
     ]) ?>
 

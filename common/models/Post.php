@@ -50,11 +50,11 @@ class Post extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'title' => '标题',
-//            'content' => 'Content',
+            'content' => '内容',
             'author' => '作者',
             'tag' => '标签',
             'post_status' => '状态',
-            'create_time' => 'Create Time',
+            'create_time' => '创建时间',
             'update_time' => '最后修改时间',
         ];
     }
@@ -65,5 +65,11 @@ class Post extends \yii\db\ActiveRecord
     public function getPostStatus()
     {
         return $this->hasOne(Poststatus::className(), ['id' => 'post_status']);
+    }
+
+
+    public function getPostAuthor()
+    {
+        return $this->hasOne(Adminuser::className(), ['id' => 'author']);
     }
 }
