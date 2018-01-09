@@ -49,13 +49,13 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'content' => 'Content',
-            'author' => 'Author',
-            'tag' => 'Tag',
-            'post_status' => 'Post Status',
+            'title' => '标题',
+//            'content' => 'Content',
+            'author' => '作者',
+            'tag' => '标签',
+            'post_status' => '状态',
             'create_time' => 'Create Time',
-            'update_time' => 'Update Time',
+            'update_time' => '最后修改时间',
         ];
     }
 
